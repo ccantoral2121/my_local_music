@@ -14,7 +14,7 @@
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../my_local_music\templates" />
+        <option value="$MODULE_DIR$/app/templates" />
       </list>
     </option>
   </component>
