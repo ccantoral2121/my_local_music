@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> List of Artist</title>
+
 </head>
 <body>
 
@@ -12,10 +12,9 @@
     <
     {% block content %}
         <h1>List of Artists</h1>
-        {% for list in list %}
-
+        {% for item in list %}
             <ol>
-            <a href="mockup.html">{{ list }}</a>
+            <a href="artist.html">{{ item }}</a>
             </ol>
         {% endfor %}
     {% endblock %}

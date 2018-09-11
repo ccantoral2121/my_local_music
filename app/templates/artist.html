@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Artists</title>
+</head>
+<body>
+
+        {% extends 'navigation.html' %}
+
+        {% block content %}
+        <h1> {{ artist.name }}</h1>
+        <h3> {{ artist.hometown }}</h3>
+        <p>
+            {{ artist.description }}
+        </p>
+            <h1>Events</h1>
+        <ul>
+            {% for item in artist.events %}
+            <p> {{ item }}</p>
+            {% endfor %}
+        </ul>
+
+        {% endblock %}
+</body>
+</html>

@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title> ME-MUSIC</title>
+    {% endif %}
+
 </head>
 <body>
 
@@ -11,7 +17,7 @@
         <ol style="font-size: 20px">
             <a href="index.html">Main Page</a>
             <a href="list_artists.html">List of Artist</a>
-            <a href="create.html">Create New Artist</a>
+            <a href="add.html">Create New Artist</a>
         </ol>
 
     </div>
