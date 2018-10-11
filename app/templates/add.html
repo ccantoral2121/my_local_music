@@ -10,6 +10,7 @@
 
     {% block content %}
 
+
         <form action="" method="post">
         {{ form.hidden_tag() }}
 
@@ -17,13 +18,14 @@
                 {{ form.name.label }}<br>
                 {{ form.name(size=30) }}<br>
             </p>
+
             <p>
                 {{ form.hometown.label }}<br>
                 {{ form.hometown(size=32) }}<br>
             </p>
             <p>
                 {{ form.description.label }}<br>
-                {{ form.description }}<br>
+                {{ form.description(rows='10',cols='90')}}<br>
             </p>
 
             <p>

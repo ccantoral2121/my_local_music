@@ -6,20 +6,33 @@
 </head>
 <body>
 
+
         {% extends 'navigation.html' %}
 
         {% block content %}
+            <h1>Artist</h1>
+
         <h1> {{ artist.name }}</h1>
         <h3> {{ artist.hometown }}</h3>
         <p>
             {{ artist.description }}
+
         </p>
             <h1>Events</h1>
-        <ul>
-            {% for item in artist.events %}
-            <p> {{ item }}</p>
+            {% if events.count() < 1 %}
+
+                <p> NO EVENTS </p>
+            {% else %}
+            {% for event in events %}
+                <ul>
+
+              <li><b>{{ event.title }}</b> at the <b>{{ event.venue.name }} on {{ event.date }}</b>
+
+
+                </ul>
             {% endfor %}
-        </ul>
+
+            {% endif %}
 
         {% endblock %}
 </body>

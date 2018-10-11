@@ -13,9 +13,10 @@
 <body>
         {% with messages = get_flashed_messages() %}
         {% if messages %}
+
         <ul>
             {% for message in messages %}
-            <h3> {{ message }}</h3>
+                <div style="color:red;"><h3> {{ message }}</h3></div>
             {% endfor %}
         </ul>
 
@@ -27,9 +28,11 @@
     <div>
         <h3 style="font-size: 30px">ME-MUSIC</h3>
         <ol style="font-size: 20px">
-            <a href="{{ url_for('index') }}">Main Page</a>
+            <a href="{{ url_for('index') }}">Home</a>
             <a href="{{ url_for('list_artists') }}">List of Artist</a>
             <a href="{{ url_for('add_artist') }}">Create New Artist</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
         </ol>
 
     </div>
